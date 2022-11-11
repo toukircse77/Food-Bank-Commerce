@@ -7,7 +7,7 @@ const Review = () => {
     const {user} = useContext(AuthContext);
     const [myreview, setMyreview] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+        fetch(`https://sample-server-mu.vercel.app/reviews?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setMyreview(data));
     },[])
@@ -25,7 +25,7 @@ const Review = () => {
             email,
             message
         }
-        fetch('http://localhost:5000/reviews',{
+        fetch('https://sample-server-mu.vercel.app/reviews',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

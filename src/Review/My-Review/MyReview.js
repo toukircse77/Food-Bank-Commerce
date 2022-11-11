@@ -9,7 +9,7 @@ const MyReview = () => {
     const [myReview, setReview] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/all-reviews?email=${user?.email}`, {
+        fetch(`https://sample-server-mu.vercel.app/all-reviews?email=${user?.email}`, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -26,7 +26,7 @@ const MyReview = () => {
         // console.log(users);
         const agree = window.confirm(`are you sure is parson delete ${users._id}`)
         if (agree) {
-            fetch(`http://localhost:5000/all-reviews/${users._id}`, {
+            fetch(`https://sample-server-mu.vercel.app/all-reviews/${users._id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

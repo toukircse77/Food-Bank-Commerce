@@ -7,7 +7,7 @@ import Carousel from './Carousel';
 const Home = () => {
 const [services, setServices] = useState([]);
 useEffect(()=>{
-    fetch('http://localhost:5000/items')
+    fetch('https://sample-server-mu.vercel.app/items')
     .then(res => res.json())
     .then(data => setServices(data))
 },[])

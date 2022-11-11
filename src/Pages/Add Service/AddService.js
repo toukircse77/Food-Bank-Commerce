@@ -20,7 +20,7 @@ const AddService = () => {
             rate: rate
         }
         
-        fetch('http://localhost:5000/services', {
+        fetch('https://sample-server-mu.vercel.app/services', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

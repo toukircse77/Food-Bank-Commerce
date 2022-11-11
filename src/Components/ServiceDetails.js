@@ -11,7 +11,7 @@ const ServiceDetails = () => {
     const {user} = useContext(AuthContext)
     const [allReviws, setReviws] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/all-review?service=${_id}`)
+        fetch(`https://sample-server-mu.vercel.app/all-review?service=${_id}`)
             .then(res => res.json())
             .then(data => setReviws(data))
     }, [])

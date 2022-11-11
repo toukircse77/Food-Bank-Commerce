@@ -28,7 +28,7 @@ const InputReviews = () => {
             message: message,
             img: photoURL, 
         }
-        fetch('http://localhost:5000/AllReview', {
+        fetch('https://sample-server-mu.vercel.app/AllReview', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
